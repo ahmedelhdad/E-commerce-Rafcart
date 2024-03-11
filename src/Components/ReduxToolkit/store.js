@@ -10,7 +10,8 @@ const store = configureStore(
             user: SliceUser,
             cart:sliceCart,
             wish:sliceWish,
-            search:sliceSearch
+            search:sliceSearch,
+       
         }
     }
 )

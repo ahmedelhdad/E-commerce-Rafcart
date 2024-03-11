@@ -20,10 +20,9 @@ const Product = () => {
         }
         getCate() 
         }
-      },[id])
-      
-    
-    
+        
+      },[])
+
   return (
     <div className="container   overflow-hidden bg-white">
       <div className=" flex items-center py-4 gap-3">
@@ -40,12 +39,13 @@ const Product = () => {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <ReactImageMagnify
+            {/* <ReactImageMagnify
             {...{
               smallImage: {
                 alt: "Wristwatch by Ted Baker London",
                 isFluidWidth: true,
                 src: product.img,
+                
                 sizes: "(max-width: 40px) 100vw, (max-width: 100px) 10vw, 30px",
               },
               largeImage: {
@@ -58,7 +58,8 @@ const Product = () => {
                 height: "100%",
               },
             }}
-          />
+          /> */}
+            <img src={product.img} alt="" />
             <div>
             <h3 className="text-xl text-gray-800 mb-3 uppercase font-bold">{product.title}</h3>
             <div className="flex items-center  mt-2">

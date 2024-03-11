@@ -1,7 +1,7 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {Taskbar,Navbar    ,Footer ,Copyright } from './Components/Website/Website.jsx'
-
 const Home = () => {
+
   return (
     <div>
        <Taskbar/>
