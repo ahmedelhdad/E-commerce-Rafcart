@@ -3,7 +3,6 @@ import { Link, useParams } from "react-router-dom";
 import { addCart } from '../ReduxToolkit/slice/sliceCart'
 import { addWish } from '../ReduxToolkit/slice/sliceWish'
 import { useDispatch } from 'react-redux'
-import axios from "axios";
 
 const Product = () => {
   const [product, setProduct] = useState([])
@@ -13,8 +12,8 @@ const Product = () => {
   useEffect(() => {
     return () => {
       const getCate = async () => {
-        const respons = await axios.get(`https://misty-dog-snaps.cyclic.app/api/product/${id}`)
-        setProduct(await respons.data)
+        const respons = await fetch(`https://misty-dog-snaps.cyclic.app/api/product/${id}`)
+        setProduct(await respons.json())
         setLoading(true)
       }
       getCate()
