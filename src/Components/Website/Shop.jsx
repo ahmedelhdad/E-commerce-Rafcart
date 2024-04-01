@@ -48,7 +48,7 @@ const Shop = () => {
   useEffect(() => {
     const getCate = async () => {
       setLoading(true);
-      const respons = await fetch(`https://misty-dog-snaps.cyclic.app/api/products`);
+      const respons = await fetch(`https://muddy-erin-coveralls.cyclic.app/api/products`);
 
       if (componentMounted) {
         setList(await respons.clone().json());
