@@ -49,7 +49,7 @@ const AddProduct = () => {
         try {
 
 
-            const respons = await axios.post('https://rafcartpp.onrender.com/api/products', product)
+            const respons = await axios.post('https://misty-dog-snaps.cyclic.app/api/products', product)
 
             if (respons.data) {
 

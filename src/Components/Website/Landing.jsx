@@ -13,7 +13,7 @@ const Landing = () => {
       const getUser = async() => 
     {
       const config = { headers: { 'Authorization':JSON.parse(window.localStorage.getItem('token')) } };
-      const res = await axios.get('https://rafcartpp.onrender.com/auth',config)
+      const res = await axios.get('https://misty-dog-snaps.cyclic.app/auth',config)
       dispatch(LOGIN(res.data))
     }
      getUser()

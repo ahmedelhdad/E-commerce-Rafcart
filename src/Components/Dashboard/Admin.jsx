@@ -9,8 +9,8 @@ const Admin = () => {
   useEffect(() => {
     const getres = async () => 
     {
-      const admin = await fetch('https://rafcartpp.onrender.com/api/app/admin')
-      const totalSales = await fetch('https://rafcartpp.onrender.com/order')
+      const admin = await fetch('https://misty-dog-snaps.cyclic.app/api/app/admin')
+      const totalSales = await fetch('https://misty-dog-snaps.cyclic.app/order')
       setAdmin(await admin.json())
       const total = await totalSales.json()
       const data=  total.filter((item) =>  item.status === 'finish')

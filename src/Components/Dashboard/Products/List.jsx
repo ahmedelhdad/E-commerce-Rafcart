@@ -10,7 +10,7 @@ const List = ({ category , search }) => {
     useEffect(() => {
         const getCate = async () => {
             setLoading(true);
-            const respons = await fetch(`https://rafcartpp.onrender.com/api/products`);
+            const respons = await fetch(`https://misty-dog-snaps.cyclic.app/api/products`);
 
             if (componentMounted) {
                 setListData(await respons.clone().json());
@@ -21,7 +21,7 @@ const List = ({ category , search }) => {
         getCate();
     }, [componentMounted]);
     const handlerDelete = async (id) => {
-        const res = await axios.post('https://rafcartpp.onrender.com/api/delete/product', { id: id })
+        const res = await axios.post('https://misty-dog-snaps.cyclic.app/api/delete/product', { id: id })
         if (res.data) {
             window.location.reload()
             toast.success(res.data)

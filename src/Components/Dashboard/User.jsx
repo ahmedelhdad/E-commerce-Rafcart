@@ -8,7 +8,7 @@ const User = () => {
     const getApi = async () => 
     {
       setLoading(true)
-      const respons = await fetch('https://rafcartpp.onrender.com/data/user')
+      const respons = await fetch('https://misty-dog-snaps.cyclic.app/data/user')
       if (componentMounted) {
         setUsers(await respons.json());
         setLoading(false)

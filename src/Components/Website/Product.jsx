@@ -15,14 +15,14 @@ const Product = () => {
   useEffect(() => {
     return () => {
       const getCate = async () => {
-        const respons = await axios.get(`https://rafcartpp.onrender.com/api/product/${id}`)
+        const respons = await axios.get(`https://misty-dog-snaps.cyclic.app/api/product/${id}`)
         setProduct(await respons.data)
         setLoading(true)
       }
       getCate()
     }
 
-  }, [])
+  }, [id,product,loading])
 
   return loading ? 
   <div className="container   overflow-hidden bg-white">

@@ -48,7 +48,7 @@ const Shop = () => {
   useEffect(() => {
     const getCate = async () => {
       setLoading(true);
-      const respons = await fetch(`https://rafcartpp.onrender.com/api/products`);
+      const respons = await fetch(`https://misty-dog-snaps.cyclic.app/api/products`);
 
       if (componentMounted) {
         setList(await respons.clone().json());
@@ -178,7 +178,6 @@ const Shop = () => {
 
             <div className="space-y-3">
             <ListInput category={category} handlerChecked={handlerChecked}/>
-              
             </div>
           </div>
     

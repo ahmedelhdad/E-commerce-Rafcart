@@ -9,7 +9,7 @@ const Order = () => {
   useEffect(() => {
     const getCate = async () => {
       setLoading(true)
-      const respons = await fetch("https://rafcartpp.onrender.com/order");
+      const respons = await fetch("https://misty-dog-snaps.cyclic.app/order");
       if (componentMounted) {
         setData(await respons.json());
         setLoading(false)
@@ -22,7 +22,7 @@ const Order = () => {
   const handler = (id) => async () => {
 
     try {
-      const respons = await axios.put("https://rafcartpp.onrender.com/order/update", { id: id });
+      const respons = await axios.put("https://misty-dog-snaps.cyclic.app/update", { id: id });
       if (respons.data === 'Succ') {
 
         toast.success(respons.data)

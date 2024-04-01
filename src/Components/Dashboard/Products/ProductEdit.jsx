@@ -13,7 +13,7 @@ const ProductEdit = () => {
   useEffect(() => {
     return () => {
       const getCate = async () => {
-        const respons = await axios.get(`https://rafcartpp.onrender.com/api/product/${id}`)
+        const respons = await axios.get(`https://misty-dog-snaps.cyclic.app/api/product/${id}`)
         setProduct(await respons.data)
         setImageURL(await respons.data.img)
       }
@@ -62,7 +62,7 @@ const ProductEdit = () => {
     e.preventDefault()
     try {
 
-      const respons = await axios.put('https://rafcartpp.onrender.com/api/updatap/product', product)
+      const respons = await axios.put('https://misty-dog-snaps.cyclic.app/api/updatap/product', product)
 
       if (respons.data) {
         toast.success('Success Edit')
