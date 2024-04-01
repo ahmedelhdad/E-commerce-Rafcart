@@ -12,7 +12,7 @@ const Arrival = () => {
   useEffect(() => {
     const getCate = async () => {
       setLoading(true);
-      const respons = await fetch("https://rafcartpp.onrender.com/api/page/arrival");
+      const respons = await fetch("https://misty-dog-snaps.cyclic.app/api/page/arrival");
 
       if (componentMounted) {
         setData(await respons.json());
