@@ -8,7 +8,7 @@ const Gallery = () => {
     const getCate = async() => 
     {
       setLoading(true)
-      const respons = await fetch('https://misty-dog-snaps.cyclic.app/category')
+      const respons = await fetch('https://muddy-erin-coveralls.cyclic.app/category')
       if(componentMounted)
       {
         setData(await respons.json())
