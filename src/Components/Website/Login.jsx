@@ -16,7 +16,7 @@ const Login = () => {
     const handlerForm = async (e) => {
         e.preventDefault();
         try {
-            const user = await axios.post('https://misty-dog-snaps.cyclic.app/login', data)
+            const user = await axios.post('https://muddy-erin-coveralls.cyclic.app/login', data)
             if (user.data.error) {
                 user.data.error.map((msg) => toast.info(msg.msg))
                 return;
