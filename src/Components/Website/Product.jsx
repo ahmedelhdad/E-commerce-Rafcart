@@ -10,19 +10,18 @@ const Product = () => {
   const { id } = useParams();
   const dispatch = useDispatch()
   useEffect(() => {
-    return () => {
-      const getCate = async () => {
-        const respons = await fetch(`https://misty-dog-snaps.cyclic.app/api/product/${id}`)
-        // setProduct(await respons.json())
-        // setLoading(true)
-        console.log(await respons.json())
-      }
-      getCate()
+
+    const getCate = async () => {
+      const respons = await fetch(`https://misty-dog-snaps.cyclic.app/api/product/${id}`)
+      setProduct(await respons.json())
+      setLoading(true)
     }
 
-  }, [id])
+  
+    getCate()
+  }, [])
 
-  return loading ? 
+return loading ?
   <div className="container   overflow-hidden bg-white">
     <div className=" flex items-center py-4 gap-3">
       <Link to="/" className="text-primary hover:text-gray-400  transition">
@@ -38,26 +37,6 @@ const Product = () => {
       </p>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {/* <ReactImageMagnify
-            {...{
-              smallImage: {
-                alt: "Wristwatch by Ted Baker London",
-                isFluidWidth: true,
-                src: product.img,
-                
-                sizes: "(max-width: 40px) 100vw, (max-width: 100px) 10vw, 30px",
-              },
-              largeImage: {
-                src: product.img,
-                width: 2000,
-                height: 2000,
-              },
-              enlargedImageContainerDimensions: {
-                width: "200%",
-                height: "100%",
-              },
-            }}
-          /> */}
       <img src={product.img} alt="" />
       <div>
         <h3 className="text-xl text-gray-800 mb-3 uppercase font-bold">{product.title}</h3>
@@ -128,14 +107,14 @@ const Product = () => {
     </div>
 
   </div>
-   : 
-    
-          <div className="loading mx-auto">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+  :
+
+  <div className="loading mx-auto">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
     
 };
 
