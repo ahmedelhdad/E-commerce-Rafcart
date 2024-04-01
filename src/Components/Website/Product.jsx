@@ -12,7 +12,7 @@ const Product = () => {
   useEffect(() => {
 
     const getCate = async () => {
-      const respons = await fetch(`https://misty-dog-snaps.cyclic.app/api/product/${id}`)
+      const respons = await fetch(`https://muddy-erin-coveralls.cyclic.app/api/product/${id}`)
       setProduct(await respons.json())
       setLoading(true)
     }
