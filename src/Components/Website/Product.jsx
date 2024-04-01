@@ -13,8 +13,9 @@ const Product = () => {
     return () => {
       const getCate = async () => {
         const respons = await fetch(`https://misty-dog-snaps.cyclic.app/api/product/${id}`)
-        setProduct(await respons.json())
-        setLoading(true)
+        // setProduct(await respons.json())
+        // setLoading(true)
+        console.log(await respons.json())
       }
       getCate()
     }
