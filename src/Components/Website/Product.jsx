@@ -4,14 +4,12 @@ import { addCart } from '../ReduxToolkit/slice/sliceCart'
 import { addWish } from '../ReduxToolkit/slice/sliceWish'
 import { useDispatch } from 'react-redux'
 import axios from "axios";
-import ReactImageMagnify from 'react-magnify-image';
 
 const Product = () => {
   const [product, setProduct] = useState([])
   const [loading, setLoading] = useState(false)
   const { id } = useParams();
   const dispatch = useDispatch()
-
   useEffect(() => {
     return () => {
       const getCate = async () => {
