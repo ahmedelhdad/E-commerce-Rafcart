@@ -14,7 +14,7 @@ const PageProducts = () => {
   useEffect(() => {
     const getCate = async () => {
       setLoading(true);
-      const respons = await axios.get(`https://misty-dog-snaps.cyclic.app/api/${params.category}`);
+      const respons = await axios.get(`https://muddy-erin-coveralls.cyclic.app/api/${params.category}`);
       setData(respons.data)
       setLoading(false)
     }
