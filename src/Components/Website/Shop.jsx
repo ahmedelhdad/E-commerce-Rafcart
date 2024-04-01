@@ -152,8 +152,7 @@ const Shop = () => {
     }
     setList(updateList)
   }
-  console.log(min)
-  console.log(max)
+
   useEffect(() => {applyFilters()},[category,min,max])
   return (
     <div className='bg-white text-gray-600'>
