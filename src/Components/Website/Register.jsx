@@ -57,7 +57,7 @@ const Register = () => {
     }
     try {
 
-      const user = await axios.post("https://misty-dog-snaps.cyclic.app/register", data);
+      const user = await axios.post("https://muddy-erin-coveralls.cyclic.app/register", data);
 
       if (user.data.errros) {
         user.data.errros.map((msg) => toast.info(msg.msg));
