@@ -14,7 +14,7 @@ const Recomended = () => {
     const getCate = async() => 
     {
       setLoading(true)
-      const respons = await fetch('https://misty-dog-snaps.cyclic.app/api/page/recomended')
+      const respons = await fetch('https://muddy-erin-coveralls.cyclic.app/api/page/recomended')
       if(componentMounted)
       {
         setData(await respons.json())
