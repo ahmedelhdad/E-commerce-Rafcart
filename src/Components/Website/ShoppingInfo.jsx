@@ -29,7 +29,7 @@ const ShoppingInfo = () => {
         }
         try
         {
-            const res = await axios.post('https://misty-dog-snaps.cyclic.app/order',data)
+            const res = await axios.post('https://muddy-erin-coveralls.cyclic.app/',data)
             if(res.data)
             {
                 toast.success(res.data)
